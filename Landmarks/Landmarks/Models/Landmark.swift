@@ -9,7 +9,7 @@
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Codable {
+struct Landmark: Codable, Identifiable {
     var id: Int
     var name: String
     fileprivate var imageName: String
@@ -24,9 +24,9 @@ struct Landmark: Codable {
                                longitude: coordinates.longitude)
     }
     
-//    func image(forSize size: Int) -> Image {
-//
-//    }
+    func image(forSize size: Int) -> Image {
+        ImageStore.shared.image(name: imageName, size: size)
+    }
     
     enum Category: String {
         case featured = "Featured"
