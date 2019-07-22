@@ -1,5 +1,5 @@
 # SwiftUIExperience
-joy of first experience SwiftUI
+Joy of First Experience SwiftUI
 
 ## 教程
 * [SwiftUI 官方教程](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
