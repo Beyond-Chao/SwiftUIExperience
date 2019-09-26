@@ -19,34 +19,34 @@ struct StateBindingView: View {
             Toggle(isOn: $showGreeting) {
                 Text("Show welcome message")
             }.padding()
-            
-            if showGreeting {
-                Text("Hello world!")
-                    .animation(Animation.spring())
-            }
-            
-            Divider()
-            
-            Button(action: {
-                self.showDetails.toggle()
-            }) {
-                Text("Show Detail")
-            }
-            
-            if showDetails {
-                Text("You should follow me on Twitter: @BeyondChao")
-                    .font(.largeTitle)
-                    .lineLimit(nil)
-                    .animation(Animation.easeIn)
-            }
-            
-            Divider()
 
-            TextField("Enter your name", text: $name)
-                .textFieldStyle(.roundedBorder)
-                .padding()
-            
-            Text("Hello, \(name)!")
+//            if showGreeting {
+//                Text("Hello world!")
+//                    .animation(Animation.spring())
+//            }
+//
+//            Divider()
+//
+//            Button(action: {
+//                self.showDetails.toggle()
+//            }) {
+//                Text("Show Detail")
+//            }
+//
+//            if showDetails {
+//                Text("You should follow me on Twitter: @BeyondChao")
+//                    .font(.largeTitle)
+//                    .lineLimit(nil)
+//                    .animation(Animation.easeIn)
+//            }
+//
+//            Divider()
+//
+//            TextField("Enter your name", text: $name)
+//                .textFieldStyle(.roundedBorder)
+//                .padding()
+//
+//            Text("Hello, \(name)!")
         }
     }
 }

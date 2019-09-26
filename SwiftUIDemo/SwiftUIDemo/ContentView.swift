@@ -87,8 +87,11 @@ struct ColorSlider: View {
     var body: some View {
         HStack {
             Text("0").foregroundColor(textColor).padding(EdgeInsets.init(top: 0, leading: 10, bottom: 0, trailing: 0))
-            Slider(value: $value, from: 0.0, through: 1.0)
-            Text("255").foregroundColor(textColor).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+//            Text("0").foregroundColor(textColor).padding(EdgeInsets.init(top: 0, leading: 10, bottom: 0, trailing: 0))
+//            Slider(value: $value, from: 0.0, through: 1.0)
+            Text("255").foregroundColor(textColor).padding(EdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 10))
+
+//            Text("255").foregroundColor(textColor).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
         }
     }
 }
