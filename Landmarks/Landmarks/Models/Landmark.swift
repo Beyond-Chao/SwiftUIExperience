@@ -26,9 +26,9 @@ struct Landmark: Codable, Identifiable {
                                longitude: coordinates.longitude)
     }
     
-    func image(forSize size: Int) -> Image {
-        ImageStore.shared.image(name: imageName, size: size)
-    }
+//    func image(forSize size: Int) -> Image {
+//        ImageStore.shared.image(name: imageName, size: size)
+//    }
     
     enum Category: String {
         case featured = "Featured"
