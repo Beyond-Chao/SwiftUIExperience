@@ -12,33 +12,26 @@ import CoreLocation
 struct Landmark: Codable, Identifiable {
     var id: Int
     var name: String
-    fileprivate var imageName: String
-    fileprivate var coordinates: Coordinates
-    
-    var isFavorite: Bool = false
     
     var state: String
     var park: String
-    var category: String
+    var description: String
     
-    var locationCoordiante: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: coordinates.latitude,
-                               longitude: coordinates.longitude)
+    private var imageName: String
+    var image: Image {
+        Image(imageName)
     }
     
-//    func image(forSize size: Int) -> Image {
-//        ImageStore.shared.image(name: imageName, size: size)
-//    }
+    private var coordinates: Coordinates
     
-    enum Category: String {
-        case featured = "Featured"
-        case lakes = "Lakes"
-        case rivers = "Rivers"
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+    }
+    
+    struct Coordinates: Hashable, Codable {
+        var latitude: Double
+        var longitude: Double
+        
     }
 }
 
-struct Coordinates: Codable {
-    var latitude: Double
-    var longitude: Double
-    
-}
